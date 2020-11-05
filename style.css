@@ -1,6 +1,8 @@
 :root {
   --link-color: #fff;
   --primary-color: #fed101;
+  --label-color: #fbda00;
+  --news-color: #fdd504;
 }
 html {
   font-size: 62.5%;
@@ -12,9 +14,11 @@ html {
   -webkit-box-sizing: border-box;
 }
 body {
+  margin: 0 auto;
   font-family: 'Arial', sans-serif;
   color: var(--primary-color);
   background-color: rgb(240, 239, 235);
+  padding-bottom: 100px;
 }
 a {
   text-decoration: none;
@@ -137,7 +141,7 @@ a.header__info-notice {
 }
 
 .header__nav {
-  background-color: var(--primary-color);
+  background-color: #fed700;
   height: 40px;
 }
 .header__nav-list {
@@ -218,7 +222,7 @@ a.header__info-notice {
   font-weight: 600;
   padding: 12px 10px;
   color: #000;
-  background-color: var(--primary-color);
+  background-color: var(--news-color);
   position: relative;
   margin-bottom: 1px;
 }
@@ -230,9 +234,9 @@ a.header__info-notice {
   position: absolute;
   top: 0;
   right: -20px;
-  background-color: var(--primary-color);
-  border-top: 18px solid var(--primary-color);
-  border-bottom: 20px solid var(--primary-color);
+  background-color: var(--news-color);
+  border-top: 18px solid var(--news-color);
+  border-bottom: 20px solid var(--news-color);
   border-right: 20px solid #fff;
 }
 .news__info {
@@ -260,4 +264,258 @@ a.header__info-notice {
 }
 .news-image {
   margin-top: 10px;
+}
+
+/*Khuyến mãi hot nhât*/
+.sale {
+  margin-top: 20px;
+}
+.heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+  padding: 18px;
+}
+.sale__hotest {
+  margin-top: 2px;
+  background-color: #fff;
+}
+.sale__hotest__list {
+  display: flex;
+}
+.sale__hotest__item {
+  width: calc(50%-15px);
+  padding: 50px 5px 5px 48px;
+  position: relative;
+  /* cursor: pointer; */
+}
+.sale__hotest__descr {
+  /* margin-left: -15px; */
+  margin-top: 15px;
+}
+.sale__hotest__descr a:first-child {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.4rem;
+}
+.sale__hotest__descr a:first-child:hover {
+  color: #0281de;
+}
+.sale__hotest__descr a {
+  display: block;
+  margin-top: 8px;
+}
+.sale__hotest__descr a:nth-child(2) {
+  color: #d0021b;
+  font-size: 1.2rem;
+}
+.sale__hotest__descr a:nth-child(3) {
+  color: #bf081f;
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: relative;
+}
+.sale__hotest__descr a:nth-child(3) > span {
+  font-size: 1rem;
+  text-decoration: underline;
+  position: absolute;
+  top: 15%;
+  right: 60%;
+}
+.sale__hotest__item::before {
+  content: 'Trả góp 0%';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 70px;
+  height: 18px;
+  background-color: var(--label-color);
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.8;
+  border-radius: 3px;
+}
+.first__item::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  cursor: pointer;
+}
+.last__item::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  right: -15px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  cursor: pointer;
+}
+.sale__hotest__item a > img:hover {
+  -webkit-animation: moving 5s linear 0s;
+  animation: moving 10s ease 0s;
+  transition: moving 100ms;
+}
+
+@-webkit-keyframes moving {
+  0% {
+    transform: translateY(-12px);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes moving {
+  0% {
+    transform: translateY(-10px);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* ĐIỆN THOẠI NỔI BẬT NHẤT */
+.highlight {
+  margin-top: 15px;
+}
+.highlight__container {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.highlight__category {
+  margin: 1px 0px 0px 130px;
+  display: flex;
+  align-items: center;
+}
+.highlight__category a {
+  display: block;
+  padding-left: 20px;
+  font-size: 1.4rem;
+  color: #0281de;
+  flex-grow: 1;
+  word-break: break-word;
+}
+.highlight__category a:hover {
+  text-decoration: underline;
+}
+.category-laptop {
+  margin: 1px 0px 0px 320px;
+}
+.category-tablet {
+  margin: 1px 0px 0px 80px;
+}
+.highlight__product {
+  width: 100%;
+}
+.highlight__product__list {
+  display: flex;
+}
+.label {
+  margin: 5px 0;
+  width: 70px;
+  padding: 3px;
+  text-align: center;
+  display: block;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 400;
+  background-color: var(--label-color);
+  border-radius: 3px;
+}
+h3 a {
+  font-size: 1.4rem;
+  color: #0281de;
+}
+.highlight__item {
+  border-top: 1px solid rgba(207, 207, 207, 0.5);
+  width: 40%;
+}
+.highlight__item img {
+  width: 100%;
+}
+.item__descr {
+  margin: 0 10px;
+  position: relative;
+  width: 230px;
+}
+.price {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  color: #bf081f;
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: relative;
+}
+.unit-price {
+  font-size: 1rem;
+  text-decoration: underline;
+  position: absolute;
+  top: 15%;
+  right: -10%;
+}
+.intial-price {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: 10px;
+  text-decoration: line-through;
+  position: relative;
+}
+.down {
+  display: inline-block;
+  color: #d0021b;
+  font-size: 1.2rem;
+}
+.rating {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+}
+.rating-star {
+  color: #dea702;
+  font-size: 1.4rem;
+  padding-right: 5px;
+}
+.item__aside {
+  width: 20%;
+  padding: 50px 30px 5px 20px;
+  border-top: 1px solid rgba(207, 207, 207, 0.5);
+  border-right: 1px solid rgba(207, 207, 207, 0.5);
+  border-left: 1px solid rgba(207, 207, 207, 0.5);
+}
+.item__aside:nth-child(3) {
+  border-right: none;
+  border-left: none;
 }
