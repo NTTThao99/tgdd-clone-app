@@ -14,7 +14,7 @@ html {
   -webkit-box-sizing: border-box;
 }
 body {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-family: 'Arial', sans-serif;
   color: var(--primary-color);
   background-color: rgb(240, 239, 235);
@@ -24,8 +24,10 @@ a {
   text-decoration: none;
 }
 .header {
-  max-width: 1365px;
+  /* max-width: 1365px; */
+  width: 100%;
   height: 80px;
+  margin: 0 auto;
 }
 .info__container {
   display: flex;
@@ -363,46 +365,18 @@ a.header__info-notice {
   -webkit-transform: rotate(-45deg);
   cursor: pointer;
 }
-.sale__hotest__item a > img:hover {
-  -webkit-animation: moving 5s linear 0s;
-  animation: moving 10s ease 0s;
-  transition: moving 100ms;
+.sale__hotest__item:hover img {
+  transform: translateY(-10px);
 }
 
-@-webkit-keyframes moving {
-  0% {
-    transform: translateY(-12px);
-  }
-  25% {
-    transform: translateY(-8px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  75% {
-    transform: translateY(-2px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.sale__hotest__item:hover .title {
+  color: #288ad6;
 }
-@keyframes moving {
-  0% {
-    transform: translateY(-10px);
-  }
-  25% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-  75% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+
+.sale__hotest__item a > img {
+  transition: all 0.3s ease;
 }
+
 /* ĐIỆN THOẠI NỔI BẬT NHẤT */
 .highlight {
   margin-top: 15px;
